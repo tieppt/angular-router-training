@@ -1,0 +1,13 @@
+<div class="container">
+  <p>
+    home works!
+  </p>
+  <p>
+    <input type="text" [ngModel]="auth.currentUser.name" #inpName>
+    <button (click)="doLogin(inpName.value)">Signin</button>
+  </p>
+  <p>
+    <a routerLink="/product">Product</a>
+    <a [routerLink]="'/course'">Course</a>
+  </p>
+</div>

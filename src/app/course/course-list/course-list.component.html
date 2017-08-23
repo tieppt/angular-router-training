@@ -1,0 +1,7 @@
+<p>
+  course-list works!
+</p>
+<h3>Hello {{ auth.currentUser.name }}</h3>
+<div *ngFor="let item of courses">
+  <a [routerLink]="['/course', item]">Course {{ item }}</a>
+</div>

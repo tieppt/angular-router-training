@@ -1,0 +1,6 @@
+<p>
+  products works!
+</p>
+<div *ngFor="let p of productsId">
+    <a [routerLink]="['/product', 'param', p]">Product id = {{ p }}</a>
+</div>
