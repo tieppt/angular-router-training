@@ -6,7 +6,7 @@ import { CourseComponent } from './course.component';
 import { CourseListComponent } from './course-list/course-list.component';
 import { CourseDetailComponent } from './course-detail/course-detail.component';
 // import { AuthService } from '../auth/auth.service';
-import { AuthModule } from "../auth/auth.module";
+import { AuthModule } from '../auth/auth.module';
 
 @NgModule({
   imports: [

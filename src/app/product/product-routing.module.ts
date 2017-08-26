@@ -5,6 +5,7 @@ import { RouterModule, Routes } from '@angular/router';
 
 import { ProductDetailComponent } from './product-detail/product-detail.component';
 import { ProductsComponent } from './products/products.component';
+import { CanActivateProductService } from './can-activate-product.service';
 
 const productRoutes: Routes = [
   {
@@ -22,7 +23,8 @@ const productRoutes: Routes = [
       },
       {
         path: 'param/:id',
-        component: ProductParamComponent
+        component: ProductParamComponent,
+        canActivate: [CanActivateProductService]
       }
     ]
   }

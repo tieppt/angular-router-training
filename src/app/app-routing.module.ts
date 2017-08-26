@@ -3,19 +3,19 @@ import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 
 import { HomeComponent } from './home/home.component';
 import { NotFoundComponent } from './not-found/not-found.component';
-import { AppPreload } from "./app-preload";
+import { AppPreload } from './app-preload';
 
 const routes: Routes = [
   {
     path: '',
     pathMatch: 'full',
     component: HomeComponent
-  // }, {
-  //   path: 'course',
-  //   loadChildren: './course/course.module#CourseModule',
-  //   data: {
-  //     preload: true
-  //   }
+  }, {
+    path: 'course',
+    loadChildren: './course/course.module#CourseModule',
+    data: {
+      preload: true
+    }
   }, {
     path: '**',
     pathMatch: 'full',
@@ -25,7 +25,8 @@ const routes: Routes = [
 
 @NgModule({
   imports: [RouterModule.forRoot(routes, {
-    // preloadingStrategy: AppPreload
+    // preloadingStrategy: PreloadAllModules
+    preloadingStrategy: AppPreload
   })],
   providers: [AppPreload],
   exports: [RouterModule]

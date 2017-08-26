@@ -8,7 +8,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { NotFoundComponent } from './not-found/not-found.component';
-import { AuthModule } from "./auth/auth.module";
+import { AuthModule } from './auth/auth.module';
 
 @NgModule({
   declarations: [
@@ -23,7 +23,7 @@ import { AuthModule } from "./auth/auth.module";
     ProductModule,
 
 
-    //end
+    // end
     AppRoutingModule
   ],
   providers: [],
